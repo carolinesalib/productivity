@@ -1,0 +1,23 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  username: carolinesalib
+  host: localhost
+  port: 5431
+
+development:
+  <<: *default
+  database: productivity_development
+
+test:
+  <<: *default
+  database: productivity_test
+
+production:
+  <<: *default
+  database: dac3vpae4lnvro
+  username: aezfwvltbtjfgk
+  host: ec2-54-163-237-249.compute-1.amazonaws.com
+  port: 5432
+  password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
