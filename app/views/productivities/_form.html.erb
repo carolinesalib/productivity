@@ -1,0 +1,92 @@
+<%= form_with(model: productivity, local: true) do |form| %>
+  <% if productivity.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(productivity.errors.count, "error") %> prohibited this productivity from being saved:</h2>
+
+      <ul>
+      <% productivity.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :day %>
+    <%= form.date_select :day, id: :productivity_day %>
+  </div>
+
+  <div class="field">
+    <%= form.label :focus %>
+    <%= form.text_field :focus, id: :productivity_focus %>
+  </div>
+
+  <div class="field">
+    <%= form.label :prioritie1 %>
+    <%= form.text_field :prioritie1, id: :productivity_prioritie1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :prioritie2 %>
+    <%= form.text_field :prioritie2, id: :productivity_prioritie2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :prioritie3 %>
+    <%= form.text_field :prioritie3, id: :productivity_prioritie3 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :prioritie4 %>
+    <%= form.text_field :prioritie4, id: :productivity_prioritie4 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :prioritie5 %>
+    <%= form.text_field :prioritie5, id: :productivity_prioritie5 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :to_avoid1 %>
+    <%= form.text_field :to_avoid1, id: :productivity_to_avoid1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :to_avoid2 %>
+    <%= form.text_field :to_avoid2, id: :productivity_to_avoid2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :to_avoid3 %>
+    <%= form.text_field :to_avoid3, id: :productivity_to_avoid3 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :learn %>
+    <%= form.text_area :learn, id: :productivity_learn %>
+  </div>
+
+  <div class="field">
+    <%= form.label :grateful1 %>
+    <%= form.text_field :grateful1, id: :productivity_grateful1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :grateful2 %>
+    <%= form.text_field :grateful2, id: :productivity_grateful2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :grateful3 %>
+    <%= form.text_field :grateful3, id: :productivity_grateful3 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :note %>
+    <%= form.number_field :note, id: :productivity_note %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
