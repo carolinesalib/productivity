@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 20180122230505) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "productivities", force: :cascade do |t|
     t.date "day"
     t.string "focus"
