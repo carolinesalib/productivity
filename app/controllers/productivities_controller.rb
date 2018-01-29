@@ -26,6 +26,8 @@ class ProductivitiesController < ApplicationController
   def create
     @productivity = Productivity.new(productivity_params)
 
+    @productivity.user = current_user
+
     respond_to do |format|
       if @productivity.save
         format.html { redirect_to @productivity, notice: 'Productivity was successfully created.' }
@@ -40,6 +42,7 @@ class ProductivitiesController < ApplicationController
   # PATCH/PUT /productivities/1
   # PATCH/PUT /productivities/1.json
   def update
+    @productivity.user = current_user
     respond_to do |format|
       if @productivity.update(productivity_params)
         format.html { redirect_to @productivity, notice: 'Productivity was successfully updated.' }
