@@ -1,4 +1,6 @@
 class Productivity < ApplicationRecord
-  scope :ordered, -> { order(day: :asc)}
+  belongs_to :user
 
+  scope :by_user, ->(user) { where user_id: user }
+  scope :ordered, -> { order(day: :asc)}
 end

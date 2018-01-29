@@ -4,7 +4,7 @@ class ProductivitiesController < ApplicationController
   # GET /productivities
   # GET /productivities.json
   def index
-    @productivities = Productivity.ordered
+    @productivities = Productivity.by_user(current_user).ordered
   end
 
   # GET /productivities/1
