@@ -1,0 +1,19 @@
+.form-login {
+    margin: 100px auto !important;
+    padding: 20px;
+    width: 400px;
+    background-color: lightgrey;
+    border-radius: 5px;
+}
+
+.form-login input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.form-login input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
